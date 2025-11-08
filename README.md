@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# EZ Labs - Front-End Intern Test Submission
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a single-page application (SPA) built with React.js as a submission for the EZ Labs Front-End Intern test.
 
-## Available Scripts
+The project features a fully responsive, multi-section homepage built from a Figma design. The core of the project is a functional "Contact Us" form that integrates with the provided API, including front-end validation and success/error handling.
 
-In the project directory, you can run:
+**Live Demo Link:** `[Link to your deployed Netlify site]`
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project successfully implements all requirements from the project brief:
 
-### `npm test`
+- **React SPA:** The entire application is a Single-Page Application built using React.
+- **Figma Design:** The UI is a recreation of the provided Figma design, with a focus on layout, fonts, and colors.
+- **Responsive Design:** The application is fully responsive and was checked against the following resolutions:
+  - 480p (Mobile)
+  - 720p (Tablet)
+  - 1080p (Desktop)
+  - 1440p (Large Desktop)
+- **API Integration:** The contact form is connected to the live API endpoint:
+  - **URL:** `https://vernanbackend.ezlab.in/api/contact-us/`
+  - **Method:** `POST`
+- **Front-End Validation:**
+  - Empty form submission is not allowed (Name, Email, and Message are required).
+  - Email format is validated using a regex.
+- **API Response Handling:**
+  - On a successful submission (API returns 200/201), the message "Form Submitted" is displayed, and the form fields are cleared.
+  - If the API returns an error, an "An error occurred" message is shown.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+- **React:** Used for building the component-based UI.
+- **JavaScript (ES6+):** For all application logic.
+- **HTML5 & CSS3:** For page structure and styling (including Flexbox and Grid for responsiveness).
+- **Axios:** Used to handle the `POST` request to the API.
+- **Postman:** Used to test the API endpoint. The collection dump is included in this repository.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to Run This Project Locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1.  **Clone the repository:**
 
-### `npm run eject`
+    ```bash
+    git clone [https://github.com/YOUR_USERNAME/ez-labs-project.git](https://github.com/YOUR_USERNAME/ez-labs-project.git)
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2.  **Navigate to the project directory:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    cd ez-labs-project
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3.  **Install dependencies:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```bash
+    npm install
+    ```
 
-## Learn More
+4.  **Run the application:**
+    ```bash
+    npm start
+    ```
+    The app will open automatically in your browser at `http://localhost:3000`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## API Testing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This repository includes a Postman collection named `EZ-Labs-Test.postman_collection.json` in the root folder. You can import this file into Postman to see the test request used to validate the API endpoint.
